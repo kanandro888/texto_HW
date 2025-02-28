@@ -6,7 +6,7 @@ EXPOSE 80
 # Usando a imagem do .NET SDK para compilar o projeto
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
-COPY ["texto_HW/Texto_HW.csproj", "texto_HW/"]
+COPY ["texto_HW.csproj", "./"]
 RUN dotnet restore "texto_HW/Texto_HW.csproj"
 COPY . .
 WORKDIR "/src/Texto_HW"
